@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "Steroids Nest Modules Interfaces",
   "author": "",
-  "private": true,
   "license": "MIT",
   "scripts": {
     "build": "tsc && copyfiles ./{package.json,LICENSE,README.md} dist/",
