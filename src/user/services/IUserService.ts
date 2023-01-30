@@ -8,4 +8,5 @@ export interface IUserService {
     registration(dto: IUserRegistrationDto): Promise<UserModel>,
     createQuery(): any, // TODO
     findById(id): any, // TODO
+    search(dto, context, UserSchema): any, // TODO
 }
