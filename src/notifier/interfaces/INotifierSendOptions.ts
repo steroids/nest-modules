@@ -19,6 +19,7 @@ export interface INotifierProviderOptions {
      */
     providerName?: string,
     sendRequestId?: number,
+    requestingIp?: string,
 }
 
 interface INotifierEmailAttachmentLikeObject {
