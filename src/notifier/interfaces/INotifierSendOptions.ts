@@ -18,6 +18,7 @@ export interface INotifierProviderOptions {
      * @see MailProvider.name
      */
     providerName?: string,
+    sendRequestId?: number,
 }
 
 interface INotifierEmailAttachmentLikeObject {
