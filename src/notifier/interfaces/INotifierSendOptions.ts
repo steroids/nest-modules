@@ -43,17 +43,17 @@ export interface INotifierMailOptions extends INotifierProviderOptions {
 }
 
 export interface INotifierSmsOptions extends INotifierProviderOptions {
-    phone: string,
+    phone: string | string[],
     message?: string,
     sender?: string,
 }
 
 export interface INotifierCallOptions extends INotifierProviderOptions {
-    phone: string[],
+    phone: string | string[],
 }
 
 export interface INotifierVoiceMessageOptions extends INotifierProviderOptions {
-    phone: string,
+    phone: string | string[],
     message: string,
     sender?: string,
     voice?: INotifierSmscVoiceType,

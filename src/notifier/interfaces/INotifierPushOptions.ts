@@ -4,21 +4,21 @@ export interface INotifierPushOptions extends INotifierProviderOptions {
     tokens: string[],
     notification: {
         // The title of the notification.
-        title: string,
+        title?: string,
         // The notification body
         body: string,
         // URL of an image to be displayed in the notification.
-        imageUrl: string,
+        imageUrl?: string,
     },
     data?: Record<string, string>,
     // https://firebase.google.com/docs/reference/admin/node/firebase-admin.messaging.androidconfig.md?hl=en#androidconfig_interface
     android?: {
-        collapseKey: string,
+        collapseKey?: string,
         data?: Record<string, string>,
         fcmOptions?: {
             analyticsLabel?: string;
         },
-        notification: AndroidNotification,
+        notification?: AndroidNotification,
         priority?: ('high' | 'normal');
         restrictedPackageName?: string;
         ttl?: number;
