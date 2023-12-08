@@ -3,5 +3,12 @@ import {INotifierSendOptions} from '../interfaces/INotifierSendOptions';
 export const INotifierService = 'INotifierService';
 
 export interface INotifierService {
-    send(options: INotifierSendOptions)
+    send(options: INotifierSendOptions): Promise<{
+        sms?: any,
+        call?: any,
+        mail?: any,
+        push?: any,
+        voice?: any,
+        sendRequestId: number,
+    }>
 }
