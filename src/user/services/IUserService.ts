@@ -1,12 +1,10 @@
-import {UserModel} from '../models/UserModel';
-import {IUserRegistrationDto} from '../dtos/IUserRegistrationDto';
+import { CrudService } from '@steroidsjs/nest/usecases/services/CrudService';
+import { SearchInputDto } from '@steroidsjs/nest/usecases/dtos/SearchInputDto';
+import { IDeepPartial } from '@steroidsjs/nest/usecases/interfaces/IDeepPartial';
+import { UserModel } from '../models/UserModel';
 
 export const IUserService = 'IUserService';
 
-export interface IUserService {
+export interface IUserService extends CrudService<UserModel, SearchInputDto, IDeepPartial<UserModel>> {
     findByLogin(login: string): Promise<UserModel>,
-    registration(dto: IUserRegistrationDto): Promise<UserModel>,
-    createQuery(): any, // TODO
-    findById(id): any, // TODO
-    search(dto, context, UserSchema): any, // TODO
 }
