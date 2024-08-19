@@ -11,4 +11,6 @@ export class UserModel {
     passwordHash: string;
 
     authRoles: any;
+
+    authRolesIds: number[];
 }
