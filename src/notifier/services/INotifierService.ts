@@ -9,6 +9,7 @@ export interface INotifierService {
         mail?: any,
         push?: any,
         voice?: any,
+        messenger?: any,
         sendRequestId: number,
     }>
 }

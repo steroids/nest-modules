@@ -13,6 +13,8 @@ export default class NotifierProviderType extends BaseEnum {
 
     static VOICE = 'voice';
 
+    static MESSENGER = 'messenger';
+
     static getLabels() {
         return {
             [this.MAIL]: 'Электронная почта',
@@ -21,6 +23,7 @@ export default class NotifierProviderType extends BaseEnum {
             [this.PUSH]: 'Push-уведомление',
             [this.STORE]: 'История уведомлений на сайте',
             [this.VOICE]: 'Голосовое сообщение',
+            [this.MESSENGER]: 'Мессенджер',
         };
     }
 }
